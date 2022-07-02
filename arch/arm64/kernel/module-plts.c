@@ -11,6 +11,8 @@
 #include <linux/module.h>
 #include <linux/sort.h>
 
+#include <asm/insn.h>
+
 static bool in_init(const struct module *mod, void *loc)
 {
 	return (u64)loc - (u64)mod->init_layout.base < mod->init_layout.size;
